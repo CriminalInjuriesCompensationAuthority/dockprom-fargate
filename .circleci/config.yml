@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Build image
           command: |
-            docker-compose build --no-cache
+            docker build -t 
       - run:
           name: Save image to an archive
           command: |
