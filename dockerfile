@@ -1,4 +1,3 @@
-FROM prom/prometheus
-ADD prometheus.yml /prometheus/
+FROM quay.io/prometheus/busybox-${OS}-${ARCH}:latest
+ADD prometheus.yml etc/prometheus/
 USER root
-
