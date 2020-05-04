@@ -14,13 +14,7 @@ jobs:
       - run:
           name: Build image
           command: |
-            docker-compose build --pull
-      - run:
-          name: Test image
-          command: |
-            docker run -d -p 8080:8080 --name built-image $FULL_IMAGE_NAME
-            sleep 10
-            docker run --network container:built-image appropriate/curl --retry 10 --retry-connrefused http://localhost:8080 | grep "Hello World!"
+            docker-compose build --no-cache
       - run:
           name: Save image to an archive
           command: |
