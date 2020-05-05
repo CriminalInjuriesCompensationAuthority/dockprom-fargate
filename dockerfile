@@ -4,4 +4,4 @@ ADD prometheus.yml /etc/prometheus/
 
 USER root
 
-EXPOSE     9090
+EXPOSE 9090
